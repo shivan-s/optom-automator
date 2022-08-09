@@ -7,11 +7,10 @@ Version 0.1.0
 import logging
 
 import pyttsx3
-from rich.console import Console
-from rich.prompt import IntPrompt
-from rich.logging import RichHandler
-
 from optom_automation.utils.phrases import PHRASES
+from rich.console import Console
+from rich.logging import RichHandler
+from rich.prompt import IntPrompt
 
 FORMAT = "%(message)s"
 logging.basicConfig(
@@ -128,9 +127,7 @@ def main():
         with console.status("Reading...", spinner="aesthetic"):
             instruction.read()
         console.rule("Pick an Action")
-        console.print(
-            f"1. Repeat Phrase: '{instruction.phrase}'", justify="left"
-        )
+        console.print(f"1. Repeat Phrase: '{instruction.phrase}'", justify="left")
         console.print(f"2. Next Phrase: '{next_phrase}'", justify="left")
         console.print("3. End Test", justify="left")
         choice = IntPrompt.ask(

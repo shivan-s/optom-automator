@@ -1,7 +1,7 @@
 """Fixtures for pytest."""
 
-import pytest
 import optom_automation
+import pytest
 
 
 @pytest.fixture
