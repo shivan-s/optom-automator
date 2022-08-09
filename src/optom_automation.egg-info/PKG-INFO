@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: optom-automation
+Version: 0.1.0
+Summary: Automate optometry
+Author: Shivan Sivakumaran
+License: MIT
+Platform: MacOS
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Provides-Extra: testing
+License-File: LICENSE
+
+# Optom Automation
+
+This is fun tool to automate certain aspects of the optometry examination.

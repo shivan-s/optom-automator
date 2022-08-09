@@ -5,8 +5,13 @@ name = "pypi"
 
 [packages]
 pyttsx3 = "*"
+optom-automation = {editable = true, path = "."}
+typer = {extras = ["all"], version = "*"}
+rich = "*"
 
 [dev-packages]
+pytest = "*"
+pytest-cov = "*"
 
 [requires]
 python_version = "3.10"
