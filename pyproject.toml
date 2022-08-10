@@ -20,7 +20,7 @@ line-length = 79
 include = '.pyi?%'
 
 [tool.pytest.ini_options]
-addopts = "--cov="
+addopts = "--cov=src --cov-report html"
 testpaths = ["tests"]
 
 [tool.mypy]
