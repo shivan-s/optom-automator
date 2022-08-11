@@ -9,8 +9,8 @@ from optom_automation.instruction.phrases import Phrases
 def mock_phrases_tree():
     """Mock phrases tree."""
     return {
-        "SCENARIO_1": ("random", ("phrase_1", "phrase_2")),
-        "SCENARIO_2": ("sequence", ("phrase_3", "phrase_4")),
+        "SCENARIO_1": ("random", ("glasses", "dispensing")),
+        "SCENARIO_2": ("sequence", ("retina", "macula")),
     }
 
 
@@ -21,6 +21,13 @@ def mock_phrases(mock_phrases_tree):
 
 
 @pytest.fixture
-def mock_instruction():
+def phrase():
+    """Phrase for mock_instruction."""
+    PHRASE = "optometry"
+    return PHRASE
+
+
+@pytest.fixture
+def mock_instruction(phrase):
     """Mock instruction."""
-    return ReadInstruction()
+    return ReadInstruction(phrase)
