@@ -2,6 +2,26 @@
 requires = ["setuptools >= 62.1.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
+[project]
+name = "optom_automator"
+version = "0.0.1"
+requires-python = ">=3.10"
+description = "Automating the boring stuff in optometry."
+readme = "README.md"
+license = { file = "LICENSE" }
+dependencies = ["pyttsx3", "rich"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: Implementation :: CPython",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["optometry_automator*"]
+exclude = ["tests"]
+
 [tool.pyright]
 include = "src"
 venv = ".venv"
@@ -12,8 +32,8 @@ profile = "black"
 multi_line_output = 3
 line_length = 79
 default_section = "THIRDPARTY"
-known_first_party = []
-known_third_party = ["optom_automator", "pytest", "pyttsx3", "rich", "setuptools"]
+known_first_party = ["optom_automator"]
+known_third_party = ["pytest", "pyttsx3", "rich", "setuptools"]
 
 [tool.black]
 line-length = 79
@@ -29,3 +49,10 @@ ignore_missing_imports = true
 
 [tool.pydocstyle]
 match = '.*\.py'
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version_files = ["src/optom_automator", "pyproject.toml"]
+version = "0.0.1"
+
+tag_format = "$version"
