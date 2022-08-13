@@ -99,3 +99,8 @@ repos:
     hooks:
       - id: optimize-png
       - id: optimize-jpg
+
+  - repo: https://github.com/hollow/pre-commit-actionlint
+    rev: "v1.6.15"
+    hooks:
+      - id: actionlint

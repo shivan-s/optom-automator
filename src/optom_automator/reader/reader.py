@@ -1,21 +1,11 @@
 """Contains the instruction class."""
 
-import logging
-
 import pyttsx3
-from rich import inspect
+
+from .exceptions import ReaderError
 
 
-class InvalidReadInstruction(Exception):
-    """Exception for invalid ReadInstruction."""
-
-    def __init__(self, message):
-        """Construct class."""
-        self.message = message
-        super().__init__()
-
-
-class ReadInstruction:
+class Reader:
     """Text to speech class wrapper.
 
     Attributes:
@@ -31,9 +21,9 @@ class ReadInstruction:
 
     def __init__(
         self,
-        phrase: str,
+        phrase: str = "",
         rate: int = 200,
-        volume: float = 0.75,
+        volume: float = 1.00,
         voice: int = 0,
     ):
         """Construct the class.
@@ -108,15 +98,6 @@ class ReadInstruction:
         self._rate = rate
 
     @property
-    def voices(self) -> list:
-        """Return a list of voices depending on the OS.
-
-        Returns:
-            list: Voices available.
-        """
-        return self._engine.getProperty("voices")
-
-    @property
     def volume(self) -> float:
         """Return the volume setting.
 
@@ -133,6 +114,15 @@ class ReadInstruction:
             volume (float): The volume setting. 1.0 being 100% volume.
         """
         self._volume = volume
+
+    @property
+    def voices(self) -> list:
+        """Return a list of voices depending on the OS.
+
+        Returns:
+            list: Voices available.
+        """
+        return self._engine.getProperty("voices")
 
     @property
     def voice(self) -> int:
@@ -156,8 +146,6 @@ class ReadInstruction:
         self._voice = voice
         if voice > len(self.voices) - 1:
             self._voice = len(self.voices) - 1
-        inspect(self.voices[self._voice])
-        logging.info(self.voices[self._voice])
 
     def read(self):
         """Read the stored phrase.
@@ -167,7 +155,7 @@ class ReadInstruction:
             to None.
         """
         if self.phrase == "" or self.phrase is None:
-            raise InvalidReadInstruction(message="No phrase set.")
+            raise ReaderError(message="No phrase set.")
         self._engine.say(self.phrase)
         self._engine.setProperty("rate", self.rate)
         self._engine.setProperty("volume", self.volume)

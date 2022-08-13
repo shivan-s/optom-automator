@@ -1,6 +1,6 @@
 .PHONY: run
 run:
-	pipenv run python src/optom_automation/main.py
+	pipenv run python src/optom_automator/main.py
 
 .PHONY: test
 test:
@@ -9,7 +9,3 @@ test:
 .PHONY: install
 install:
 	pipenv sync --dev
-
-.PHONY: coverage-report
-coverage-report:
-	firefox ./htmlcov/index.html

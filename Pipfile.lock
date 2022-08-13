@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "32893ebe5b85707c3bb5abd03feabec7fc41d82e46326314261991eb5707c61c"
+            "sha256": "55a91ce9a985b1de6b56baa29025a11d742c50ad024b9a35c5abf6fc80f29463"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -38,7 +38,7 @@
             ],
             "version": "==0.9.1"
         },
-        "optom-automation": {
+        "optom-automator": {
             "editable": true,
             "path": "."
         },

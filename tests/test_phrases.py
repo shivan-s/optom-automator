@@ -1,7 +1,8 @@
 """Testing phrases."""
 
 import pytest
-from optom_automation.instruction.phrases import InvalidPhraseTree, Phrases
+from optom_automator.phrases import Phrases
+from optom_automator.phrases.exceptions import PhrasesError
 
 
 class TestPhrase:
@@ -48,7 +49,7 @@ class TestPhrase:
     def test_wrong_stage_type(self):
         """Wrong stage type is set."""
         wrong_stage = Phrases({"Stage0": ("Wrong", ("A", "B"))})
-        with pytest.raises(InvalidPhraseTree):
+        with pytest.raises(PhrasesError):
             wrong_stage.read_phrase()
 
     def test_phrase_len(self, mock_phrases, mock_phrases_tree):

@@ -1,8 +1,8 @@
-"""Fixtures for pytest."""
+"""Fixtures for testing."""
 
 import pytest
-from optom_automation.instruction import ReadInstruction
-from optom_automation.instruction.phrases import Phrases
+from optom_automator.phrases import Phrases
+from optom_automator.reader import Reader
 
 
 @pytest.fixture
@@ -28,6 +28,6 @@ def phrase():
 
 
 @pytest.fixture
-def mock_instruction(phrase):
+def mock_reader(phrase):
     """Mock instruction."""
-    return ReadInstruction(phrase)
+    return Reader(phrase)
