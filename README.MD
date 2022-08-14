@@ -4,26 +4,25 @@ _Find yourself saying 1 or 2 a little too much? Then, this tool is for you._
 
 This is a fun hobby project that I have been working on, where the main purpose is to repeat phrases that I commonly say in an eye examination.
 
-## Phrases
+It's still a work in progress...
+
+## The Phrase Tree
 
 How this works?
 
-There is a usual sequence (for refraction). And that is:
-    1. (intro)
-      a. GREETING ->
-      b. HISTORY ->
-    2. (preliminary)
-      a. RIGHT_VA ->
-      b. LEFT_VA ->
-    3. (refraction)
-      a. RIGHT_REDGREEN ->
-      b. RIGHT_CYLINDER ->
-      c. RIGHT_SPHERE ->
-      d. LEFT_SPHERE(R/G) ->
-      e. LEFT_CYLINDER ->
-      f. LEFT_SPHERE(FINE) ->
-    4. (end)
-      END_EXAM -|
+There is a sequence to the phrases. I call it a 'phrase tree'. The phrase tree is divced into 'stages'.
+
+1. GREETING
+2. HISTORY
+3. RIGHT_VA
+4. LEFT_VA
+5. RIGHT_REDGREEN
+6. RIGHT_CYLINDER
+7. RIGHT_SPHERE
+8. LEFT_REDGREEN
+9. LEFT_CYLINDER
+10. LEFT_SPHERE
+11. END_EXAM
 
 The capitals represent the 'stages' of the testing. They can act as keys for tuples. The tuples provide a little variation in testing.
 

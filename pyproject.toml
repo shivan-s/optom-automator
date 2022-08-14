@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "optom_automator"
-version = "0.0.1"
+version = "0.1.0"
 requires-python = ">=3.10"
 description = "Automating the boring stuff in optometry."
 readme = "README.md"
-license = { file = "LICENSE" }
+license = { file = "LICENSE", text = "MIT License" }
 dependencies = ["pyttsx3", "rich"]
 classifiers = [
   "License :: OSI Approved :: MIT License",
@@ -55,7 +55,7 @@ match = '.*\.py'
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-version_files = ["src/optom_automator", "pyproject.toml"]
-version = "0.0.1"
+version_files = ["src/optom_automator/__init__.py", "pyproject.toml"]
+version = "0.1.0"
 
 tag_format = "$version"
