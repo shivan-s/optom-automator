@@ -5,10 +5,15 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "optom_automator"
 version = "0.3.1"
+authors = [
+  { name = "Shivan Sivakumaran" },
+  { email = "<shivan.sivakumaran@gmail.com>" },
+]
 requires-python = ">=3.10"
 description = "Automating the boring stuff in optometry."
 readme = "README.md"
-license = { text = "MIT License" }
+license = { text = "MIT" }
+keywords = ["optom", "optometry", "optometrist", "automation"]
 dependencies = ["pyttsx3", "rich"]
 classifiers = [
   "License :: OSI Approved :: MIT License",
@@ -19,6 +24,11 @@ classifiers = [
 
 [project.scripts]
 my-script = "optom_automator.main:main"
+
+[project.urls]
+homepage = "https://github.com/shivan-s/optom-automator"
+repository = "https://github.com/shivan-s/optom-automator"
+changelog = "https://github.com/shivan-s/optom-automator/blob/main/CHANGELOG.md"
 
 [tool.setuptools.packages.find]
 where = ["src"]
