@@ -23,7 +23,7 @@ classifiers = [
 ]
 
 [project.scripts]
-my-script = "optom_automator.main:main"
+optom-automator = "optom_automator.main:main"
 
 [project.urls]
 homepage = "https://github.com/shivan-s/optom-automator"
@@ -32,7 +32,7 @@ changelog = "https://github.com/shivan-s/optom-automator/blob/main/CHANGELOG.md"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["optometry_automator*"]
+include = ["optom_automator*"]
 exclude = ["tests"]
 
 [tool.pyright]

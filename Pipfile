@@ -6,7 +6,7 @@ name = "pypi"
 [packages]
 pyttsx3 = "*"
 rich = "*"
-optom-automator = {editable = true, path = "."}
+optom-automator = { path = "." }
 
 [dev-packages]
 pytest = "*"
