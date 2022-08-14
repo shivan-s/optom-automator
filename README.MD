@@ -1,5 +1,13 @@
 # The Optom Automator
 
+[![Build](https://github.com/shivan-s/optom-automator/actions/workflows/build.yml/badge.svg)](https://github.com/shivan-s/optom-automator/actions/workflows/build.yml)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Latest Version](https://img.shields.io/pypi/v/optom-automator.svg)](https://pypi.python.org/pypi/optom-automator/)
+[![Format](https://img.shields.io/pypi/format/optom-automator.svg)](https://pypi.python.org/pypi/optom-automator/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/optom-automator.svg)](https://pypi.python.org/pypi/optom-automator/)
+[![Implementation](https://img.shields.io/pypi/implementation/optom-automator.svg)](https://pypi.python.org/pypi/optom-automator/)
+[![License](https://img.shields.io/pypi/status/optom-automator.svg)](https://pypi.python.org/pypi/optom-automator/)
+
 _Find yourself saying 1 or 2 a little too much? Then, this tool is for you._
 
 This is a fun hobby project that I have been working on, where the main purpose is to repeat phrases that I commonly say in an eye examination.
