@@ -17,6 +17,9 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: CPython",
 ]
 
+[project.scripts]
+my-script = "optom_automator.main:main"
+
 [tool.setuptools.packages.find]
 where = ["src"]
 include = ["optometry_automator*"]
