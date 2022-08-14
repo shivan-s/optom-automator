@@ -3,6 +3,7 @@
 from contextlib import nullcontext as does_not_raise
 
 import pytest
+
 from optom_automator.reader import Reader
 from optom_automator.reader.exceptions import ReaderError
 

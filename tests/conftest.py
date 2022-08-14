@@ -1,6 +1,7 @@
 """Fixtures for testing."""
 
 import pytest
+
 from optom_automator.phrases import Phrases
 from optom_automator.reader import Reader
 

@@ -5,7 +5,6 @@ name = "pypi"
 
 [packages]
 pyttsx3 = "*"
-typer = {extras = ["all"], version = "*"}
 rich = "*"
 optom-automator = {editable = true, path = "."}
 

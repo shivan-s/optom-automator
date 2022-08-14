@@ -93,3 +93,7 @@ repos:
       - id: commitizen
     repo: https://github.com/commitizen-tools/commitizen
     rev: v2.29.5
+  - repo: https://github.com/abravalheri/validate-pyproject
+    rev: main
+    hooks:
+      - id: validate-pyproject

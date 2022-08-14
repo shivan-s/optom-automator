@@ -4,15 +4,16 @@ Date: 7/07/2022
 """
 from collections.abc import Iterable
 
-from optom_automator.__init__ import __app__, __author__, __version__
-from optom_automator.phrases import Phrases
-from optom_automator.reader import Reader
 from rich.align import Align
 from rich.console import Console, Group
 from rich.panel import Panel
 from rich.prompt import IntPrompt
 from rich.text import Text
 from rich.theme import Theme
+
+from optom_automator.__init__ import __app__, __author__, __version__
+from optom_automator.phrases import Phrases
+from optom_automator.reader import Reader
 
 reader = Reader()
 phrase = Phrases()
