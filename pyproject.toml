@@ -11,12 +11,15 @@ authors = [
 ]
 requires-python = ">=3.10"
 description = "Automating the boring stuff in optometry."
-readme = "README.md"
+readme = { file = "README.md", content-type = "text/markdown" }
 license = { text = "MIT" }
 keywords = ["optom", "optometry", "optometrist", "automation"]
 dependencies = ["pyttsx3", "rich"]
 classifiers = [
   "License :: OSI Approved :: MIT License",
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Healthcare Industry",
+  "Natural Language :: English",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3 :: Only",
   "Programming Language :: Python :: Implementation :: CPython",

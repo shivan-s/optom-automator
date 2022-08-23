@@ -94,11 +94,11 @@ def main() -> None:
     """Run main."""
     with console.screen(hide_cursor=False):
         while True:
-            with console.status("Reading...", spinner="aesthetic"):
+            with console.status(f"Talking... '{phrase.current}'", spinner="aesthetic"):
                 reader.phrase = phrase.read_phrase()
                 reader.read()
             choices = [
-                f"Repeat - '{phrase.current}'",
+                f"Repeate- '{phrase.current}'",
                 f"Next - '{phrase.peek}'",
                 "Repeat (slower)",
                 "Repeat (faster)",

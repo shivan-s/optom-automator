@@ -156,10 +156,10 @@ class Reader:
         """
         if self.phrase == "" or self.phrase is None:
             raise ReaderError(message="No phrase set.")
-        self._engine.say(self.phrase)
         self._engine.setProperty("rate", self.rate)
         self._engine.setProperty("volume", self.volume)
         self._engine.setProperty("voice", self.voices[self.voice].id)
+        self._engine.say(self.phrase)
         self._engine.runAndWait()
         self._engine.stop()
 

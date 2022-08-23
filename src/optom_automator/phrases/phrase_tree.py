@@ -2,6 +2,11 @@
 
 from .types import StageType
 
+SEQUENCE = tuple(
+    f"Is it clearer with lens {2*i+1}. Or. Lens {2*i+2}. Or about the same."
+    for i in range(11)
+)
+
 PHRASE_TREE: dict[str, StageType] = {
     "GREETING": ("random", ("Kia ora", "Hello", "Welcome")),
     "HISTORY": (
@@ -9,6 +14,7 @@ PHRASE_TREE: dict[str, StageType] = {
         (
             "How can I help you out today with your eyesight?",
             "So, how is everything getting along with your vision?",
+            "Please tell me about your vision.",
         ),
     ),
     "RIGHT_VA": (
@@ -28,16 +34,7 @@ PHRASE_TREE: dict[str, StageType] = {
             "Are the symbols clearer on the red or green square?",
         ),
     ),
-    "RIGHT_CYLINDER": (
-        "sequence",
-        (
-            "Is it clearer with view 1 or view 2 or about the same?",
-            "Is it clearer with lens 3 or lens 4 or about the same?",
-            "Is it clearer with lens 5 or lens 6 or about the same?",
-            "Is it clearer with lens 7 or lens 8 or about the same?",
-            "Is it clearer with lens 9 or lens 10 or about the same?",
-        ),
-    ),
+    "RIGHT_CYLINDER": ("sequence", SEQUENCE),
     "RIGHT_SPHERE": (
         "random",
         ("Is it clearer of worse with the next lens or about the same?",),
@@ -49,16 +46,7 @@ PHRASE_TREE: dict[str, StageType] = {
             "Are the symbols clearer on the red or green square?",
         ),
     ),
-    "LEFT_CYLINDER": (
-        "sequence",
-        (
-            "Is it clearer with view 1 or view 2 or about the same?",
-            "Is it clearer with lens 3 or lens 4 or about the same?",
-            "Is it clearer with lens 5 or lens 6 or about the same?",
-            "Is it clearer with lens 7 or lens 8 or about the same?",
-            "Is it clearer with lens 9 or lens 10 or about the same?",
-        ),
-    ),
+    "LEFT_CYLINDER": ("sequence", SEQUENCE),
     "LEFT_SPHERE": (
         "random",
         ("Is it clearer of worse with the next lens or about the same?",),
